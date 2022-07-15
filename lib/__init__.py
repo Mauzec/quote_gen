@@ -18,9 +18,10 @@ class Quote:
         options.add_argument('--disable-dev-shm-usage')
         options.add_argument('--disable-browser-side-navigation')
         options.add_argument('--disable-gpu')
-        options.binary_location = '/Applications/Google Chrome Beta.app/Contents/MacOS/Google Chrome Beta'
+        options.headless
+        options.binary_location = '' #browser_path
 
-        self.driver = webdriver.Chrome(options=options)
+        self.driver = webdriver.Chrome(options=options) #driver should be in the path
 
         self.driver.get('https://quotes-generator.com/quotes-generator.php')
 
